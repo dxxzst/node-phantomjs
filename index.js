@@ -21,37 +21,21 @@ const phantom = require('phantom');//导入模块
     console.log(status);
 
     // 输出该页面的内容
-    // const content = await page.property('content');
-    // console.log(content);
+    const content = await page.property('content');
+    console.log(content);
 
-    let result = await page.evaluate(function () {
-        return $("table").map(function () {
-            return {
-                id: this.id,
-                height: $(this).height(),
-                data: $(this).DataTable().data().toArray(),
-                length: $(this).DataTable().data().length,
-                isTrue: navigator.webdriver || window.webdriver || window.self !== top
-            }
-        }).toArray();
-    });
-    console.log(result);
-
-    // await setTimeout(function () {
-    //     let result = page.evaluate(function () {
-
-    //         return $("table").map(function () {
-    //             return {
-    //                 id: this.id,
-    //                 height: $(this).height(),
-    //                 data: $(this).DataTable().data().toArray(),
-    //                 length: $(this).DataTable().data().length
-    //             }
-    //         }).toArray();
-    //     });
-    //
-    //     console.log(result);
-    // }, 5000);
+    // let result = await page.evaluate(function () {
+    //     return $("table").map(function () {
+    //         return {
+    //             id: this.id,
+    //             height: $(this).height(),
+    //             data: $(this).DataTable().data().toArray(),
+    //             length: $(this).DataTable().data().length,
+    //             isTrue: navigator.webdriver || window.webdriver || window.self !== top
+    //         }
+    //     }).toArray();
+    // });
+    // console.log(result);
 
     // 退出该phantom实例
     await instance.exit();
