@@ -1,6 +1,7 @@
 const webdriver = require('selenium-webdriver');
+require("chromedriver");
 
-let driver = new webdriver.Builder().forBrowser('safari').build();
+let driver = new webdriver.Builder().forBrowser('chrome').build();
 driver.get('https://free-ss.site/');
 
 driver.sleep(15000);//毫秒

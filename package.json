@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "geckodriver": "^1.14.1",
-    "iedriver": "^3.13.0",
     "phantom": "^6.0.3",
     "selenium-webdriver": "^4.0.0-alpha.1"
   }
