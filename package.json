@@ -9,8 +9,10 @@
   "author": "XueSong",
   "license": "ISC",
   "dependencies": {
+    "browser-x": "0.0.1-beta7",
     "geckodriver": "^1.14.1",
     "phantom": "^6.0.3",
+    "puppeteer": "^1.11.0",
     "selenium-webdriver": "^4.0.0-alpha.1"
   }
 }
